@@ -1,0 +1,19 @@
+/* bug.css */
+.parent {
+  /* Missing explicit width - This is the source of the problem */
+}
+
+.child {
+  width: calc(100% - 10px);
+  background-color: lightblue;
+}
+
+/* bugSolution.css */
+.parent {
+  width: 300px; /* Explicit width added */
+}
+
+.child {
+  width: calc(100% - 10px);
+  background-color: lightgreen; /* Changed color to visually distinguish */
+}
